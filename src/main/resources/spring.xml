@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!--    这个文件名不一定叫 spring XML 也可以是其他名字-->
+<!--    sping 的配置文件，最好放在根路径下-->
+<!--    配置 Bean， 在 Spring 中，所有的对象都是 Bean-->
+<!--    需要配置文件，才能让 spring 帮助我们管理这些 Bean 对象-->
+<!--    bean id 和 bean class 这两个是最重要的属性
+        id： 唯一的标识
+        class: 必须填写全路径也就是带包名
+-->
+    <bean id="userBean" class="com.zidi.spring_tut_2025.bean.User"/>
+<!--    spring 是怎么调用 Bean 的呢？ Bean 是通过反射机制，用无参构造去实例化-->
+
+</beans>
