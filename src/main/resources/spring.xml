@@ -11,7 +11,18 @@
         id： 唯一的标识
         class: 必须填写全路径也就是带包名
 -->
-    <bean id="userBean" class="com.zidi.spring_tut_2025.bean.User"/>
+
 <!--    spring 是怎么调用 Bean 的呢？ Bean 是通过反射机制，用无参构造去实例化-->
+
+<!--    配置 Dao-->
+    <bean id="userDaoImpl" class="com.zidi.spring_tut_2025.dao.impl.UserDaoImpl"></bean>
+
+<!--    配置 Service -->
+
+    <bean name="userServiceImpl" class="com.zidi.spring_tut_2025.service.impl.UserServiceImpl">
+
+        <property name="userDao" ref="userDaoImpl"/>
+
+    </bean>
 
 </beans>

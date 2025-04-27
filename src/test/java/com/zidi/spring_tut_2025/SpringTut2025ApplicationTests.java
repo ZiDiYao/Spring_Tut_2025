@@ -3,6 +3,8 @@ package com.zidi.spring_tut_2025;
 import com.zidi.spring_tut_2025.bean.User;
 import org.apache.naming.factory.BeanFactory;
 import org.junit.jupiter.api.Test;
+import org.junit.platform.commons.logging.Logger;
+import org.junit.platform.commons.logging.LoggerFactory;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -21,6 +23,8 @@ class SpringTut2025ApplicationTests {
         Object uiserBean = applicationConext.getBean("userBean", User.class);
         System.out.println("Testing result" + uiserBean);
 
+        Logger logger = LoggerFactory.getLogger(SpringTut2025Application.class);
+        logger.error(() -> "wrong");
     }
 
 }
