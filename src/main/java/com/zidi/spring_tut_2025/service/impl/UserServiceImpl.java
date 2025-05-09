@@ -8,16 +8,11 @@ import org.springframework.stereotype.Service;
 @Service
 public class UserServiceImpl implements UserService {
 
-    private UserDao userDao;
+    public void logout(){
+        System.out.println("系统正在安全退出");
+    }
 
-    @Autowired
-    public void setUserDao(UserDao userDao){
-        this.userDao = userDao;
-    }
-    @Override
-    public void deleteUser(){
-        userDao.deleteById();
-    }
+
 
 
 }
